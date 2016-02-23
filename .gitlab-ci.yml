@@ -1,0 +1,18 @@
+image: ruby:2.1
+
+before_script:
+  - gem install bundler
+  - gem install nokogiri -v '1.6.7.2' -- --use-system-libraries
+  - bundle config build.nokogiri --use-system-libraries
+
+pages:
+  stage: deploy
+  script:
+    - bundle install --path ~/bundle
+    - bundle exec jekyll build -d public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
+
