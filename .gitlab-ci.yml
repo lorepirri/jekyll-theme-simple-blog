@@ -1,18 +1,29 @@
+# requiring the enviroment of Ruby 2.1.x
 image: ruby:2.1
 
-before_script:
-  - gem install bundler
-  - gem install nokogiri -v '1.6.7.2' -- --use-system-libraries
-  - bundle config build.nokogiri --use-system-libraries
+# add cache to 'vendor' for speeding up builds
+cache:
+  paths: 
+    - vendor/
 
+before_script:
+  - bundle install --path vendor
+
+# add a job called 'test'
+test:
+  stage: test
+  script:
+    - bundle exec jekyll build -d public/
+  except:
+    - master # the 'test' job will affect all branches expect 'master'
+
+# the 'pages' job will deploy and build your site to the 'public' path
 pages:
   stage: deploy
   script:
-    - bundle install --path ~/bundle
     - bundle exec jekyll build -d public/
   artifacts:
     paths:
       - public
   only:
-    - master
-
+    - master # this job will affect only the 'master' branch
