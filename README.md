@@ -8,11 +8,11 @@ View site: https://jekyll-themes.gitlab.io/default-bundler/
 This project was created with [Jekyll] 3.1.2 default template by running `jekyll new project` locally. 
 After that, the project was pushed to this repository with the following configurations:
 
-- Jekyll 3.1.2
+- Jekyll version: 3.1.2
 - Build Jekyll with Bundler: `bundle exec jekyll build`
-- GitLab CI config: [`.gitlab-ci.yml`](https://gitlab.com/jekyll-themes/default-bundler/blob/master/.gitlab-ci.yml)
-- Gemfile: [`Gemfile`](https://gitlab.com/jekyll-themes/default-bundler/blob/master/Gemfile)
-- Gitignore: [`.gitignore`](https://gitlab.com/jekyll-themes/default-bundler/blob/master/.gitignore)
+- GitLab CI config: [`.gitlab-ci.yml`]
+- Gemfile: [`Gemfile`]
+- Gitignore: [`.gitignore`]
 - Jekyll config: [`_config.yml`](https://gitlab.com/jekyll-themes/default-bundler/blob/master/_config.yml)
 
 ## Building Jekyll with Bundler on GitLab
@@ -29,7 +29,7 @@ In order to build your Jekyll site with Bundler in your **GitLab Pages** project
 # requiring the environment of Ruby 2.1.x
 image: ruby:2.1
 
-# add cache to 'vendor' for speeding up builds
+# add bundle cache to 'vendor' for speeding up builds
 cache:
   paths: 
     - vendor/
@@ -60,7 +60,7 @@ gem 'jekyll', '3.1.2' # this is the Jekyll version we are working with
 gem 'nokogiri', '1.6.7.2'
 ```
 
-_**Note:** Nokogiri is a dependency that might cause errors if it's not added to the script._
+_**Note:** Nokogiri is a dependency that might cause errors if it's not explicitly added to the script._
 
 ### Jekyll configuration
 
@@ -116,22 +116,23 @@ pages:
 
 # Building locally
 
-We assume you already have Jekyll 3.1.2 installed and up and running on your computer.
+_**Note:** We assume you already have [Jekyll 3.1.2][jek-312] installed and up and running on your computer._
 
 To work locally with this project, there are a few options. But let's keep it simple:
 
-- Download or clone this project by running `git clone https://gitlab.com/jekyll-themes/default-bundler.git`
+- [Download] or clone this project by running `git clone https://gitlab.com/jekyll-themes/default-bundler.git`
 - Install [Bundler] if you don't have it already: `gem install bundler`
 - Navigate to the folder where you cloned the project `cd path/to/project`
 - Run `bundle install`
+- Adjust [`_config.yml`] according to your project
 - Serve Jekyll with bundler: `bundle exec jekyll serve`
 
-## Contributors to this project
-
-@virtuacreative
-@ayufan
-@axil
-
+[`.gitlab-ci.yml`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/.gitlab-ci.yml
+[`Gemfile`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/Gemfile
+[`.gitignore`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/.gitignore
+[`_config.yml`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/_config.yml
 
 [Bundler]: http://bundler.io/
+[Download]: https://gitlab.com/jekyll-themes/default-bundler/repository/archive.zip?ref=master
 [Jekyll]: http://jekyllrb.com/
+[jek-312]: https://rubygems.org/gems/jekyll/versions/3.1.2
