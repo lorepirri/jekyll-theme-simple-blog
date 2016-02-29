@@ -120,7 +120,7 @@ _**Note:** We assume you already have [Jekyll 3.1.2][jek-312] installed and up a
 
 To work locally with this project, there are a few options. But let's keep it simple:
 
-- [Download] or clone this project by running `git clone https://gitlab.com/jekyll-themes/default-bundler.git`
+- Fork, clone or download this project
 - Install [Bundler] if you don't have it already: `gem install bundler`
 - Navigate to the folder where you cloned the project `cd path/to/project`
 - Run `bundle install`
@@ -133,6 +133,5 @@ To work locally with this project, there are a few options. But let's keep it si
 [`_config.yml`]: https://gitlab.com/jekyll-themes/default-bundler/blob/master/_config.yml
 
 [Bundler]: http://bundler.io/
-[Download]: https://gitlab.com/jekyll-themes/default-bundler/repository/archive.zip?ref=master
 [Jekyll]: http://jekyllrb.com/
 [jek-312]: https://rubygems.org/gems/jekyll/versions/3.1.2
