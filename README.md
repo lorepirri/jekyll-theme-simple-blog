@@ -1,3 +1,8 @@
+![Jekyll Version](https://img.shields.io/badge/Jekyll-3.1.2-red.svg)
+![Build Status](http://gitlab.com/jekyll-themes/default-bundler/badges/master/build.svg)
+
+----
+
 View site: https://jekyll-themes.gitlab.io/default-bundler/
 
 -----
