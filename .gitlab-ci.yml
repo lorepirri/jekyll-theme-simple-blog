@@ -13,7 +13,10 @@ before_script:
 test:
   stage: test
   script:
-    - bundle exec jekyll build -d public/
+    - bundle exec jekyll build -d test/
+  artifacts:
+    paths:
+      - test # generating site folder to be browsed or download
   except:
     - master # the 'test' job will affect all branches expect 'master'
 
