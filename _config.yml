@@ -21,4 +21,4 @@ github_username:  jekyll
 markdown: kramdown
 
 # Make sure to exclude 'vendor' from the build 
-exclude: [vendor]
+exclude: [vendor, "Gemfile", "Gemfile.lock"]
