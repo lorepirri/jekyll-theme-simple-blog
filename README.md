@@ -62,10 +62,10 @@ pages:
 source "https://rubygems.org"
 
 gem 'jekyll', '3.1.2' # this is the Jekyll version we are working with
-gem 'nokogiri', '1.6.7.2'
+# gem 'nokogiri', '1.6.7.2'
 ```
 
-_**Note:** Nokogiri is a dependency that might cause errors if it's not explicitly added to the script._
+_**Note:** Nokogiri is a dependency that might cause errors if it's not explicitly added to the script. If you face building errors, uncomment it._
 
 ### Jekyll configuration
 
@@ -83,10 +83,21 @@ exclude: [vendor] # make sure to exclude 'vendor' from the build
 _**Note:** CI is configured to bundle all gems in the_ `vendor` _directory, 
 which Jekyll will mistakenly read and explode on. That's why you need to exclude it on_ `_config.yml`.
 
+You can also exclude `Gemfile` and `Gemfile.lock` from the builds. If you don't, they will be rendered to the public site folder.
+To do that, replace the line
+
+`exclude: [vendor]`
+
+for
+
+`exclude: [vendor, "Gemfile", "Gemfile.lock"]`
+
 ## How to test builds in all branches
 
+### Create a Test `job`
+
 If you want to build Jekyll with Bundler and also perform a `test` job to every branch except `master`, 
-and also deploy your website from `master` branch, this is what you need to do to your `gitlab-ci.yml`:
+and also deploy your website from `master` branch, this is what you need to do to your GitLab-ci file:
 
 - `.gitlab-ci.yml`
 
@@ -117,6 +128,27 @@ pages:
       - public # only the job 'pages' will generate the artifacts (similar to your local '_site' folder)
   only:
     - master
+```
+
+### `Test` static site folder
+
+You can also generate your site `artifacts` and download them when testing your builds. 
+By doing so, you can check your site before merging your `test` branch with `master`.
+They will NOT override the content of the `public` folder if you assign a different
+folder to the `test` job. To do that, replace the [job `test`](#create-a-test-job) for the code below:
+
+
+```yaml
+# add a job called 'test' and assign a folder to store the static site
+test:
+  stage: test
+  script:
+    - bundle exec jekyll build -d test/ # replacing 'public' for 'test'
+  artifacts:
+    paths:
+      - test # the 'test' job will generate a 'test/' folder containing your static site
+  except:
+    - master 
 ```
 
 # Building locally
