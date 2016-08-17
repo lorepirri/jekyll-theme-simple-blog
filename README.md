@@ -31,8 +31,8 @@ In order to build your Jekyll site with Bundler in your **GitLab Pages** project
 - `.gitlab-ci.yml`
 
 ```yaml
-# requiring the environment of Ruby 2.1.x
-image: ruby:2.1
+# requiring the environment of Ruby 2.3.x
+image: ruby:2.3
 
 # add bundle cache to 'vendor' for speeding up builds
 cache:
