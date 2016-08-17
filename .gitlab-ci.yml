@@ -1,5 +1,5 @@
-# requiring the environment of Ruby 2.1.x
-image: ruby:2.1
+# requiring the environment of Ruby 2.3.x
+image: ruby:2.3
 
 # add cache to 'vendor' for speeding up builds
 cache:
