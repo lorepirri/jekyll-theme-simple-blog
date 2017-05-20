@@ -4,7 +4,7 @@
 
 *Simple Blog is a Jekyll theme for GitHub Pages. It is based on [Cayman Blog Theme](https://github.com/lorepirri/cayman-blog). You can [preview the theme to see what it looks like](http://lorepirri.github.io/jekyll-theme-simple-blog), or even [use it today](#usage).*
 
-<img src="thumbnail.png" alt="Thumbnail of jekyll-theme-simple-blog" style="max-width:30%; border: 1px solid grey;"/> <img src="thumbnail-mobile.png" alt="Thumbnail of jekyll-theme-simple-blog for mobile" style="width: 239px; height: 424px;"/>
+<img src="https://github.com/lorepirri/jekyll-theme-simple-blog/blob/master/thumbnail.png" alt="Thumbnail of jekyll-theme-simple-blog" style="max-width:30%; border: 1px solid grey;"/> <img src="https://github.com/lorepirri/jekyll-theme-simple-blog/blob/master/thumbnail-mobile.png" alt="Thumbnail of jekyll-theme-simple-blog for mobile" style="width: 239px; height: 424px;"/>
 
 ## Install
 
