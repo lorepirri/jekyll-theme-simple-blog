@@ -14,7 +14,7 @@ layout: default
     {% for post in site.posts %}
       <li>
 
-        {% assign date_format = site.cayman-blog.date_format | default: "%b %-d, %Y" %}
+        {% assign date_format = site.jekyll-theme-simple-blog.date_format | default: "%b %-d, %Y" %}
         <span class="post-meta">{{ post.date | date: date_format }}</span>
 
         <h2>

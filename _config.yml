@@ -1,10 +1,10 @@
-title: Cayman Blog Theme
-description: Cayman Blog Theme is a clean, responsive blogging theme for Jekyll and GitHub Pages, with social/SEO features.
+title: Simple Blog Theme
+description: Simple Blog Theme is a clean, responsive blogging theme for Jekyll and GitHub Pages, with social/SEO features.
 show_downloads: true
 google_analytics:
-# cayman-blog date format
+# jekyll-theme-simple-blog date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
-cayman-blog:
+jekyll-theme-simple-blog:
   date_format: "%b %-d, %Y"
 
 theme: # leave it empty
