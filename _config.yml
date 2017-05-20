@@ -9,6 +9,9 @@ jekyll-theme-simple-blog:
 
 theme: # leave it empty
 
+header:
+  image: /assets/patterns/symphony.png
+
 # social
 author: "Lore Pirri"
 image: /thumbnail-jumbo.png
