@@ -127,7 +127,8 @@ a {
 .project-tagline {
   margin-bottom: 2rem;
   font-weight: normal;
-  opacity: 0.7;
+  opacity: 1;
+  color: #eeeeee;
 
   @include large {
     font-size: 1.25rem;
