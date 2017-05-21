@@ -85,6 +85,10 @@
 
     <section class="main-content">
 
+{% if page.layout == 'post' %}
+      <h4 class="post-meta" itemprop="readtime">{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</h4>
+{% endif %}
+
       {{ content }}
 
       <footer class="site-footer">
