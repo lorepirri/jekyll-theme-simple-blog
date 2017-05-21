@@ -45,7 +45,11 @@
 
     {% if page.layout == 'home' %}
       {% assign page-tagline = site.description | default: site.github.project_tagline | escape %}
+      {% assign header-padding = "80px" %}
+    {% else %}
+      {% assign header-padding = "40px" %}
     {% endif %}
+
     {% if page.layout == 'page' %}
       {% assign page-tagline = page.tagline | escape %}
     {% endif %}
@@ -53,7 +57,7 @@
       {% assign page-tagline = page.tagline | escape  %}
     {% endif %}
 
-    <section class="page-header" style="background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url('{{ site.baseurl }}{{ page.header.image | default: site.header.image }}') center center repeat;">
+    <section class="page-header" style="padding-top: {{ header-padding }}; padding-bottom: {{ header-padding }}; background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url('{{ site.baseurl }}{{ page.header.image | default: site.header.image }}') center center repeat;">
       <h1 class="project-name">{{ page-title }}</h1>
       <h2 class="project-tagline">{{ page-tagline }}</h2>
       {% if page.layout == 'home' and site.github.is_project_page %}
