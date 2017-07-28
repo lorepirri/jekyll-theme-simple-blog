@@ -22,3 +22,29 @@ markdown: kramdown
 
 # Make sure to exclude 'vendor' from the build 
 exclude: [vendor, "Gemfile", "Gemfile.lock"]
+
+show_downloads: false
+
+google_analytics:
+
+# jekyll-theme-simple-blog date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+jekyll-theme-simple-blog:
+  date_format: "%b %-d, %Y"
+
+theme: # leave it empty
+
+header:
+  image: /assets/patterns/symphony.png
+
+# social
+author: "Lore Pirri"
+image: /thumbnail-jumbo.png
+twitter:
+  username: lorepirri
+#  site:
+facebook:
+  publisher: lorepirri
+  profile_id: 1809805629
+  app_id: 126080721296732
+#  admins:

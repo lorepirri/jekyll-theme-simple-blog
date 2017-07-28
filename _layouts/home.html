@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div>
+
+  {{ content }}
+
+  <h2>Latest Posts</h2>
+
+  <div>&nbsp;</div>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+
+        {% assign date_format = site.jekyll-theme-simple-blog.date_format | default: "%b %-d, %Y" %}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <span class="post-meta"> • {% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</span>
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}" title="{{ post.title }}">{{ post.title | escape }}</a>
+        </h2>
+
+        <span>{{ post.excerpt | markdownify | truncatewords: 30 }}</span>
+
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>

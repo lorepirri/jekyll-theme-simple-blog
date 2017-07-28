@@ -1,15 +1,15 @@
 ---
 layout: page
 title: About
-permalink: /about/
+tagline: A few more words about this theme
+permalink: /about.html
+header:
+  image: /assets/patterns/upfeathers.png
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+This is the _Simple Blog_ Jekyll theme. You can find out more info about customizing this theme, as well as basic usage documentation, and source code at: [jekyll-theme-simple-blog](https://github.com/lorepirri/jekyll-theme-simple-blog)
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
+You can find the source code for _Jekyll_ at [jekyll](https://github.com/jekyll/jekyll)
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+
+[Go to the Home Page]({{ site.url }}{{ site.baseurl }})

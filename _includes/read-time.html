@@ -1,0 +1,13 @@
+ <!--
+  see:
+  https://github.com/mmistakes/jekyll-theme-basically-basic/blob/master/_includes/read-time.html -->
+
+{% assign words_per_minute = site.words_per_minute | default: 200 %}
+
+{% assign words = post.content | default: content | strip_html | number_of_words %}
+
+{% if words < words_per_minute %}
+  ~1 {{ 'min read' }}
+{% else %}
+  {{ words | divided_by:words_per_minute }} {{ 'min read' }}
+{% endif %}
