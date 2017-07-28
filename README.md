@@ -6,7 +6,7 @@
 View site: https://jekyll-themes.gitlab.io/default-bundler/
 
 -----
-# Theme: Jekyll 3 Default - mod 1
+# Theme: Jekyll 3 Default - mod 2
 
 ## Original source:
 
