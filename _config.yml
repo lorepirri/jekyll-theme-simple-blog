@@ -13,14 +13,14 @@ description: > # this means to ignore newlines until "baseurl:"
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 baseurl: "/jekyll-theme-simple-blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
-url: "https://lorepirri.gitlab.io/jekyll-theme-simple-blog" # change this to the base hostname & protocol for your site
+#url: "https://lorepirri.gitlab.io/jekyll-theme-simple-blog" # change this to the base hostname & protocol for your site
 twitter_username: lorepirri
 github_username:  lorepirri
 
 # Build settings
 markdown: kramdown
 
-# Make sure to exclude 'vendor' from the build 
+# Make sure to exclude 'vendor' from the build
 exclude: [vendor, "Gemfile", "Gemfile.lock"]
 
 show_downloads: false
