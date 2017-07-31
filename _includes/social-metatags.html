@@ -18,7 +18,7 @@
   {% assign twitter_creator = site.twitter.username | default: nil | escape %}
 {% endif %}
 
-{% assign page_description = page.excerpt | default: site.description | default: site.github.project_tagline | strip_html | normalize_whitespace | truncate: 152 | escape %}
+{% assign page_description = page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 152 | escape %}
 
 {%if page.image %}
   {% assign page_image = site.url | append: site.baseurl | append: page.image %}
