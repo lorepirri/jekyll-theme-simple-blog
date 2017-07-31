@@ -8,8 +8,17 @@
 # Site settings
 title: Simple Blog Theme
 description: Simple Blog Theme is a clean, responsive blogging theme for Jekyll and GitHub Pages, with social/SEO features.
-show_downloads: true
+
+baseurl: "/jekyll-theme-simple-blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
+url: "https://lorepirri.gitlab.io" # change this to the base hostname & protocol for your site
+twitter_username: lorepirri
+github_username:  lorepirri
+
+# Build settings
+markdown: kramdown
+
 google_analytics:
+
 # jekyll-theme-simple-blog date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 jekyll-theme-simple-blog:
@@ -30,5 +39,15 @@ facebook:
   publisher: pirriontheroad
   profile_id: 1809805629
   app_id: 126080721296732
+  admins: lorepirri
   authors: lorepirri
-#  admins:
+
+# github
+github:
+  owner_url: https://github.com/lorepirri
+  project_tagline: "here short descr"
+  is_project_page: true
+  show_downloads: true
+  repository_url: https://github.com/lorepirri/jekyll-theme-simple-blog
+  zip_url: https://github.com/lorepirri/jekyll-theme-simple-blog/archive/master.zip
+  tar_url: https://github.com/lorepirri/jekyll-theme-simple-blog/tarball/master
