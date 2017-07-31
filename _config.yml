@@ -44,10 +44,11 @@ twitter:
   username: lorepirri
 #  site:
 facebook:
-  publisher: lorepirri
+  publisher: pirriontheroad
   profile_id: 1809805629
   app_id: 126080721296732
-#  admins:
+  admins: lorepirri
+  authors: lorepirri
 
 # github
 github:
