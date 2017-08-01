@@ -26,7 +26,7 @@ exclude: [vendor, "Gemfile", "Gemfile.lock"]
 # permalink: /:categories/:year/:month/:day/:title.html
 # none is equivalent to /:title.html
 # https://jekyllrb.com/docs/permalinks
-permalink: none
+permalink: /:title.html
 
 google_analytics:
 
@@ -52,7 +52,7 @@ facebook:
   app_id: 126080721296732
   admins: lorepirri
   authors: lorepirri
-  pixelcode: 1670622619859349 
+  pixelcode: 1670622619859349
 
 # github on post
 #github:
