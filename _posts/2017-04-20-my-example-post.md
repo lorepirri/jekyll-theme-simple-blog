@@ -1,5 +1,10 @@
 ---
 layout: post
+categories: tests
+image: /assets/patterns/paisley.png
+meta: "Test"
+header:
+  image: /assets/patterns/asanoha-400px.png
 repository:
   owner_url: https://github.com/lorepirri
   project_tagline: "here short descr"
