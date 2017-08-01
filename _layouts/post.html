@@ -10,5 +10,14 @@ layout: default
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
   {% endif %}
-  
+
+  {% if site.facebook.pixelcode %}
+  <!-- Facebook Pixel Code -->
+  <script>
+  fbq('track', 'ViewContent');
+  </script>
+  <!-- End Facebook Pixel Code -->
+  {% endif %}
+
+
 </article>
