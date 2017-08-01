@@ -3,7 +3,14 @@ layout: default
 ---
 
 <div>
-
+  {% if site.facebook.publisher %}
+  <div class="fb-page"
+    data-href="https://www.facebook.com/{{ site.facebook.publisher }}"
+    data-width="340"
+    data-hide-cover="false"
+    data-show-facepile="true">
+  </div>
+  {% endif %}
   {{ content }}
 
   <h2>Latest Posts</h2>

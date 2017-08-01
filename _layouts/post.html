@@ -4,7 +4,21 @@ layout: default
 <article itemscope itemtype="http://schema.org/BlogPosting">
 
   <div itemprop="articleBody">
+    <div
+      class="fb-like"
+      data-share="true"
+      data-width="450"
+      data-show-faces="true">
+    </div>
     {{ content }}
+    <div
+      class="fb-like"
+      data-share="true"
+      data-width="450"
+      data-show-faces="true">
+    </div>
+    {% assign canonical_url = page.url | replace:'index.html','' | prepend: site.url %}
+    <div class="fb-comments" data-href="{{ canonical_url }}" data-numposts="5"></div>
   </div>
 
   {% if site.disqus.shortname %}
