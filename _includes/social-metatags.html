@@ -32,49 +32,49 @@
 
 <!-- Place this data between the <head> tags of your website -->
 {%if page_author %}
-  <meta name="author" content="{{ page_author }}">
+  <meta name="author" content="{{ page_author }}" />
 {%endif %}
 <meta name="description" content="{{ page_description }}" />
 {%if page.tags.length > 0 %}
   <meta name="keywords" itemprop="tags" content="{{ page.tags | join: ', ' | escape }}"/>
 {%endif %}
 {%if page.keywords %}
-  <meta name="keywords" itemprop="keywords" content="{{ page.keywords | escape  }}">
+  <meta name="keywords" itemprop="keywords" content="{{ page.keywords | escape  }}" />
 {%endif %}
 {%if page.categories.length > 0 %}
-  <meta name="keywords" itemprop="categories" content="{{ page.categories | join: ', ' | escape  }}">
+  <meta name="keywords" itemprop="categories" content="{{ page.categories | join: ', ' | escape  }}" />
 {%endif %}
 {%if page.category %}
-  <meta name="keywords" itemprop="category" content="{{ category | escape  }}">
+  <meta name="keywords" itemprop="category" content="{{ category | escape  }}" />
 {%endif %}
 
 <!-- Schema.org markup for Google+ -->
-<meta itemprop="name" content="{{ page_title }}">
-<meta itemprop="description" content="{{ page_description }}">
+<meta itemprop="name" content="{{ page_title }}" />
+<meta itemprop="description" content="{{ page_description }}" />
 {%if page_image %}
-  <meta itemprop="image" content="{{ page_image }}">
+  <meta itemprop="image" content="{{ page_image }}" />
 {%endif %}
 
 <!-- Twitter Card data -->
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary_large_image" />
 
 {%if site.twitter.site %}
-  <meta name="twitter:site" content="@{{ site.twitter.site }}">
+  <meta name="twitter:site" content="@{{ site.twitter.site }}" />
 {%endif %}
 
-<meta name="twitter:title" content="{{ page_title }}">
-<meta name="twitter:description" content="{{ page_description }}">
+<meta name="twitter:title" content="{{ page_title }}" />
+<meta name="twitter:description" content="{{ page_description }}" />
 
 {%if twitter_creator %}
-  <meta name="twitter:creator" content="@{{ twitter_creator }}">
+  <meta name="twitter:creator" content="@{{ twitter_creator }}" />
 {%endif %}
 
 <!-- Twitter summary card with large image must be at least 280x150px -->
 {%if page_image %}
-  <meta name="twitter:image:src" content="{{ page_image }}">
-  <meta property="twitter:image" content="{{ page_image }}">
+  <meta name="twitter:image:src" content="{{ page_image }}" />
+  <meta property="twitter:image" content="{{ page_image }}" />
 {%endif %}
-<meta property="twitter:url" content="{{ canonical_url }}">
+<meta property="twitter:url" content="{{ canonical_url }}" />
 
 <!-- Open Graph data -->
 <meta property="og:title" content="{{ page_title }}" />
@@ -99,44 +99,44 @@
 {%endif %}
 
 {%if site.facebook.app_id %}
-  <meta property="fb:app_id" content="{{ site.facebook.app_id }}">
+  <meta property="fb:app_id" content="{{ site.facebook.app_id }}" />
 {%endif %}
 
 {%if site.facebook.profile_id %}
-  <meta property="fb:profile_id" content="{{ site.facebook.profile_id }}">
+  <meta property="fb:profile_id" content="{{ site.facebook.profile_id }}" />
 {%endif %}
 
 {%if facebook_publisher_id %}
-  <meta property="article:publisher" content="https://www.facebook.com/{{ facebook_publisher_id }}">
+  <meta property="article:publisher" content="https://www.facebook.com/{{ facebook_publisher_id }}" />
   <meta property="fb:pages" content="{{ facebook_publisher_id }}" />
 {%endif %}
 
 {%if facebook_authors %}
   {% for author in facebook_authors %}
-    <meta property="article:author" content="https://www.facebook.com/{{ author }}">
+    <meta property="article:author" content="https://www.facebook.com/{{ author }}" />
   {% endfor %}
 {%endif %}
 
 
 {%if page.tags %}
   {% for tag in page.tags %}
-    <meta property="article:tag" content="{{ tag | escape }}">
+    <meta property="article:tag" content="{{ tag | escape }}" />
   {% endfor %}
 {%endif %}
 
 {%if page.keywords %}
   {% assign keywordsList = page.keywords | split:', ' %}
   {% for keyword in keywordsList %}
-    <meta property="article:tag" content="{{ keyword | escape }}">
+    <meta property="article:tag" content="{{ keyword | escape }}" />
   {% endfor %}
 {%endif %}
 
 {%if page.categories %}
   {% for category in page.categories %}
-    <meta property="article:tag" content="{{ category | escape }}">
+    <meta property="article:tag" content="{{ category | escape }}" />
   {% endfor %}
 {%endif %}
 
 {%if page.category %}
-  <meta property="article:tag" content="{{ category | escape }}">
+  <meta property="article:tag" content="{{ category | escape }}" />
 {%endif %}
