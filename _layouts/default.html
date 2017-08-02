@@ -80,7 +80,7 @@
        }(document, 'script', 'facebook-jssdk'));
     </script>
     {% endif %}
-    
+
     {% include site-header.html %}
 
     {% if page.layout == 'home' %}
@@ -165,7 +165,7 @@
         {% endif %}
 
         <!-- Facebook icon -->
-        {% assign facebook_profile = site.facebook.publisher | default: site.facebook.authors | default: nil | escape %}
+        {% assign facebook_profile = site.facebook.publisher_id | default: site.facebook.authors | default: nil | escape %}
         {% if facebook_profile %}
         <span class="my-span-icon">
           <a href="https://facebook.com/{{ facebook_profile }}" target="_blank" aria-label="{{ site.author }}'s Facebook" title="{{ site.author }}'s Facebook">

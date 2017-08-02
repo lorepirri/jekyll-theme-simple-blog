@@ -8,14 +8,14 @@
 {% endif %}
 
 
-{% if page.author or page.facebook.publisher %}
+{% if page.author or page.facebook.publisher_id %}
   {% assign page_author = page.author | default: nil | escape %}
-  {% assign facebook_publisher = page.facebook.publisher | default: nil | escape %}
+  {% assign facebook_publisher_id = page.facebook.publisher_id | default: nil | escape %}
   {% assign twitter_creator = page.twitter.username | default: site.twitter.site | default: nil | escape %}
   {% assign facebook_authors = page.facebook.authors | default: nil | escape %}
 {% else %}
   {% assign page_author = site.author | default: nil | escape %}
-  {% assign facebook_publisher = site.facebook.publisher | default: nil | escape %}
+  {% assign facebook_publisher_id = site.facebook.publisher_id | default: nil | escape %}
   {% assign twitter_creator = site.twitter.username | default: nil | escape %}
   {% assign facebook_authors = site.facebook.authors | default: nil | escape %}
 {% endif %}
@@ -106,9 +106,11 @@
   <meta property="fb:profile_id" content="{{ site.facebook.profile_id }}">
 {%endif %}
 
-{%if facebook_publisher %}
-  <meta property="article:publisher" content="https://www.facebook.com/{{ facebook_publisher }}">
+{%if facebook_publisher_id %}
+  <meta property="article:publisher" content="https://www.facebook.com/{{ facebook_publisher_id }}">
+  <meta property="fb:pages" content="{{ facebook_publisher_id }}" />
 {%endif %}
+
 {%if facebook_authors %}
   {% for author in facebook_authors %}
     <meta property="article:author" content="https://www.facebook.com/{{ author }}">
