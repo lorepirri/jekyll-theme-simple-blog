@@ -47,11 +47,11 @@ twitter:
   username: lorepirri
 #  site:
 facebook:
-  #publisher_id: 1474191545979552 #1592372034171500
-  #profile_id: 1809805629
+  publisher_id: 1474191545979552 #1592372034171500
+  profile_id: 1809805629
   app_id: 1798910940422432 #126080721296732 #
   #admins: 1809805629
-  #authors: 1809805629
+  authors: 1809805629
   #pixelcode: 1670622619859349
 
 # github on post
