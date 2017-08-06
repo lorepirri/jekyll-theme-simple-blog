@@ -14,8 +14,6 @@ description: > # this means to ignore newlines until "baseurl:"
   Google search results) and in your feed.xml site description.
 baseurl: "/jekyll-theme-simple-blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
 url: "https://lorepirri.gitlab.io" # change this to the base hostname & protocol for your site
-twitter_username: lorepirri
-github_username:  lorepirri
 
 # Build settings
 markdown: kramdown
@@ -51,7 +49,7 @@ facebook:
   profile_id: 1809805629
   app_id: 1798910940422432 #126080721296732 #
   #admins: 1809805629
-  authors: 1809805629
+  authors: [1809805629]
   #pixelcode: 1670622619859349
 
 # github on post

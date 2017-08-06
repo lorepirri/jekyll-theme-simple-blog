@@ -119,12 +119,12 @@
         {{ page_author }}
       </span></span>
     {% endif %}
-    <span style="padding-left: 6px; padding-right: 6px;"> • </span>
+    <span style="padding-left: 6px; padding-right: 6px;"> - </span>
     <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {% assign date_format = site.jekyll-theme-simple-blog.date_format | default: "%b %-d, %Y" %}
       {{ page.date | date: date_format }}
     </time>
-    <span style="padding-left: 10px; padding-right: 10px;"> • </span>
+    <span style="padding-left: 6px; padding-right: 6px;"> - </span>
     <span class="post-meta" itemprop="readtime">
       {% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}
     </span>

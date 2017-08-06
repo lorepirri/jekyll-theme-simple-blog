@@ -72,9 +72,9 @@
 <!-- Twitter summary card with large image must be at least 280x150px -->
 {%if page_image %}
   <meta name="twitter:image:src" content="{{ page_image }}" />
-  <meta property="twitter:image" content="{{ page_image }}" />
+  <meta name="twitter:image" content="{{ page_image }}" />
 {%endif %}
-<meta property="twitter:url" content="{{ canonical_url }}" />
+<meta name="twitter:url" content="{{ canonical_url }}" />
 
 <!-- Open Graph data -->
 <meta property="og:title" content="{{ page_title }}" />
@@ -112,8 +112,8 @@
 {%endif %}
 
 {%if facebook_authors %}
-  {% for author in facebook_authors %}
-    <meta property="article:author" content="https://www.facebook.com/{{ author }}" />
+  {% for fb_author in facebook_authors %}
+    <meta property="article:author" content="https://www.facebook.com/{{ fb_author }}" />
   {% endfor %}
 {%endif %}
 
