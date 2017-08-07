@@ -20,6 +20,9 @@ layout: default
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <span class="post-meta" style="padding-left: 5px; padding-right: 5px;"> • </span>
         <span class="post-meta">{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</span>
+        <span class="post-meta" style="padding-left: 5px; padding-right: 5px;"> • </span>
+        {% assign canonical_post_url = post.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
+        <span class="post-meta"><span class="fb-comments-count" data-href="{{ canonical_post_url }}"></span> comments</span>
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title | escape }}</a>
         </h2>

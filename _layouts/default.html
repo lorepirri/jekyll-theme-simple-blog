@@ -23,6 +23,8 @@
       {% include social-metatags.html %}
     {% endif %}
 
+    {% assign canonical_url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
+
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
     {% if site.gems contains "jekyll-feed" %}
@@ -106,38 +108,6 @@
     </section>
 
     <section class="main-content">
-
-{% if page.layout == 'post' %}
-
-
-<!-- Post tagline -->
-{% if page.layout == 'post' %}
-  <div class="post-meta">
-    {% assign page_author = page.author | default: site.author | default: nil | escape %}
-    {% if page_author %}
-      <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">
-        {{ page_author }}
-      </span></span>
-    {% endif %}
-    <span style="padding-left: 6px; padding-right: 6px;"> - </span>
-    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      {% assign date_format = site.jekyll-theme-simple-blog.date_format | default: "%b %-d, %Y" %}
-      {{ page.date | date: date_format }}
-    </time>
-    <span style="padding-left: 6px; padding-right: 6px;"> - </span>
-    <span class="post-meta" itemprop="readtime">
-      {% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}
-    </span>
-  </div>
-{% endif %}
-<!-- End: Post tagline -->
-
-
-
-
-
-      <br />
-{% endif %}
 
       {{ content }}
 
