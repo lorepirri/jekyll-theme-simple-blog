@@ -89,7 +89,7 @@
       {% assign page-tagline = page.tagline | default: page.repository.project_tagline | escape  %}
     {% endif %}
 
-    <section class="page-header" style="padding-top: {{ header-padding }}; padding-bottom: {{ header-padding }}; background: linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.0)), url('{{ site.baseurl }}{{ page.header.image | default: site.header.image }}') center center repeat;">
+    <section class="page-header" style="padding-top: {{ header-padding }}; padding-bottom: {{ header-padding }}; background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url('{{ site.baseurl }}{{ page.header.image | default: site.header.image }}') center center repeat;">
       <h1 class="project-name">{{ page-title }}</h1>
       <h2 class="project-tagline">{{ page-tagline }}</h2>
       {% if page.layout == 'post' and page.repository.is_project_page %}
