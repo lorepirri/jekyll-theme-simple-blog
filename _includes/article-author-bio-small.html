@@ -1,0 +1,38 @@
+{% assign page_author_name = page.author | default: site.author | default: nil | escape %}
+{% assign page_author_id = page.authors[0] | default: site.authors[0] | default: nil | escape %}
+{% assign page_author_short_bio = page.author_short_bio | default: site.author_short_bio | default: nil | escape %}
+{% assign page_author_picture = page.author_picture | default: site.author_picture | default: nil | escape %}
+
+{% if page_author_name %}
+<div class="author-article">
+  <div class="author-picture">
+    <a href="https://www.facebook.com/{{ page_author_id }}">
+      <img src="{{ page_author_picture }}" class="author-image" alt="{{ page_author_name }} on Facebook">
+    </a>
+  </div>
+
+  <div class="author-bio">
+    <a href="https://www.facebook.com/{{ page_author_id }}">
+      <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">
+        {{ page_author_name }}
+      </span></span>
+    </a>
+    <div class="post-meta-list">{{ page_author_short_bio }}</div>
+  </div>
+</div>
+{% endif %}
+<div>
+  <div class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      {% assign date_format = site.jekyll-theme-simple-blog.date_format | default: "%b %-d, %Y" %}
+      {{ page.date | date: date_format }}
+    </time>
+    <span style="padding-left: 6px; padding-right: 6px;"> • </span>
+    <span class="post-meta" itemprop="readtime">
+      {% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}
+    </span>
+    <span class="post-meta" style="padding-left: 5px; padding-right: 5px;"> • </span>
+    {% assign canonical_url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
+    <span class="post-meta"><span class="fb-comments-count" data-href="{{ canonical_url }}">0</span> comments</span>
+  </div>
+</div>

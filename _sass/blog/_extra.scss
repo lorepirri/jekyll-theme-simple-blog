@@ -1,0 +1,23 @@
+.author-article {
+  display: -ms-flexbox!important;
+  display: flex!important;
+  display: block;
+}
+
+.author-picture {
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+.author-bio {
+    padding-left: 15px!important;
+    overflow: hidden!important;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.author-image {
+  border-radius: 100%;
+  width: 50ox;
+  height: 50px;
+}

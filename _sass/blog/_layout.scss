@@ -134,6 +134,13 @@
 .post-meta {
   font-size: $small-font-size;
   color: $grey-color;
+  padding: 25px 0px 35px 0px;
+}
+
+.post-meta-list {
+  font-size: $small-font-size;
+  color: $grey-color;
+  padding-bottom: 5px;
 }
 
 .post-link {

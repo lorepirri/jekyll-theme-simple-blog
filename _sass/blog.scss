@@ -4,7 +4,7 @@
 
 $base-font-size:   16px !default;
 $base-font-weight: 400 !default;
-$small-font-size:  $base-font-size * 0.875 !default;
+$small-font-size:  13px !default;
 $base-line-height: 1.5 !default;
 
 $spacing-unit:     30px !default;
@@ -44,5 +44,6 @@ $on-laptop:        $large-breakpoint !default;
 // Import partials.
 @import
   "blog/base",
-  "blog/layout"
+  "blog/layout",
+  "blog/extra"
 ;
