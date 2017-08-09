@@ -6,13 +6,13 @@
 {% if page_author_name %}
 <div class="author-article">
   <div class="author-picture">
-    <a href="https://www.facebook.com/{{ page_author_id }}">
+    <a href="https://www.facebook.com/{{ page_author_id }}" target="_blank">
       <img src="{{ page_author_picture }}" class="author-image" alt="{{ page_author_name }} on Facebook">
     </a>
   </div>
 
   <div class="author-bio">
-    <a href="https://www.facebook.com/{{ page_author_id }}">
+    <a href="https://www.facebook.com/{{ page_author_id }}" target="_blank">
       <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">
         {{ page_author_name }}
       </span></span>
