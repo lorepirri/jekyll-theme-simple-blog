@@ -39,14 +39,14 @@ header:
   image: /assets/patterns/symphony.png
 
 # social
-author: "Lore Pirri"
+author: "Simple Blog Theme"
 image: /assets/patterns/seigaiha.png
 twitter:
   username: lorepirri
 instagram_username: pirriontheroad
 #linkedin_username: lorepirri
 
-author_short_bio: Software Engineer, Traveller, Geek
+author_short_bio: Jekyll Blog Theme, Responsive, SEO and Facebook enabled
 author_picture: assets/img/profile-60.png
 
 #  site:
