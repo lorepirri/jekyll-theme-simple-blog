@@ -7,7 +7,7 @@
 {% assign words = post.content | default: content | strip_html | number_of_words %}
 
 {% if words < words_per_minute %}
-  ~1 {{ 'min read' }}
+  ~1 {{ site.t[page.lang].read-time }}
 {% else %}
-  {{ words | divided_by:words_per_minute }} {{ 'min read' }}
+  {{ words | divided_by:words_per_minute }} {{ site.t[page.lang].read-time }}
 {% endif %}

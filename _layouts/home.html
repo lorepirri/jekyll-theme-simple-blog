@@ -7,7 +7,7 @@ layout: default
   {{ content }}
 
   <div>&nbsp;</div>
-  <h2>Latest Posts</h2>
+  <h2>{{ site.t[page.lang].latest-posts }}</h2>
   <div>&nbsp;</div>
 
   {% assign posts_lang = site.posts | where:"lang", page.lang %}
@@ -24,17 +24,11 @@ layout: default
         </h2>
 
         <div class="post-meta-list">
-          {% assign date_format = site.jekyll-theme-simple-blog.date_format | default: "%b %-d, %Y" %}
-          <span>{{ post.date | date: date_format }}</span>
-          <span style="padding-left: 5px; padding-right: 5px;"> • </span>
-          <span>{% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}</span>
-          <span style="padding-left: 5px; padding-right: 5px;"> • </span>
-          {% assign canonical_post_url = post.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
-          <span><span class="fb-comments-count" data-href="{{ canonical_post_url }}"></span> comments</span>
+          {% include post-meta-info.html post_date=post.date post_url=post.url post_lang=post.lang %}
         </div>
 
         <span>{{ post.excerpt | markdownify | truncatewords: 30 }}</span>
-        <div><a  href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">Read more...</a></div>
+        <div><a  href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ site.t[page.lang].read-more }}...</a></div>
       </li>
     {% endfor %}
   </ul>

@@ -71,3 +71,49 @@ github:
 #  repository_url: https://github.com/lorepirri/jekyll-theme-simple-blog
 #  zip_url: https://github.com/lorepirri/jekyll-theme-simple-blog/archive/master.zip
 #  tar_url: https://github.com/lorepirri/jekyll-theme-simple-blog/tarball/master
+
+# translation
+
+t:
+  en:
+    latest-posts:  "Latest Posts"
+    read-more:  "read more"
+    on-word: "on"
+    contact: "Contact"
+    contact-page: "contact.md"
+    read-time: "min read"
+    comments: "comments"
+    months:
+      january: "Jan"
+      february: "Feb"
+      march: "Mar"
+      april: "Apr"
+      may: "May"
+      june: "Jun"
+      july: "Jul"
+      august: "Aug"
+      september: "Sep"
+      october: "Oct"
+      november: "Nov"
+      december : "Dec"
+  it:
+    latest-posts:  "Ultimi Posts"
+    read-more:  "leggi"
+    on-word: "su"
+    contact: "Contatta"
+    contact-page: "contatta.md"
+    read-time: "min di lettura"
+    comments: "commenti"
+    months:
+      january: "Gen"
+      february: "Feb"
+      march: "Mar"
+      april: "Apr"
+      may: "Mag"
+      june: "Giu"
+      july: "Lug"
+      august: "Ago"
+      september: "Set"
+      october: "Ott"
+      november: "Nov"
+      december : "Dic"

@@ -1,0 +1,27 @@
+<div>
+  <time datetime="{{ include.post_date | date_to_xmlschema }}" itemprop="datePublished">
+    {% assign m = include.post_date | date: "%-m" %}
+    {% case m %}
+      {% when '1' %}{{ site.t[include.post_lang].months.january }}
+      {% when '2' %}{{ site.t[include.post_lang].months.february }}
+      {% when '3' %}{{ site.t[include.post_lang].months.march }}
+      {% when '4' %}{{ site.t[include.post_lang].months.april }}
+      {% when '5' %}{{ site.t[include.post_lang].months.may }}
+      {% when '6' %}{{ site.t[include.post_lang].months.june }}
+      {% when '7' %}{{ site.t[include.post_lang].months.july }}
+      {% when '8' %}{{ site.t[include.post_lang].months.august }}
+      {% when '9' %}{{ site.t[include.post_lang].months.september }}
+      {% when '10' %}{{ site.t[include.post_lang].months.october }}
+      {% when '11' %}{{ site.t[include.post_lang].months.november }}
+      {% when '12' %}{{ site.t[include.post_lang].months.december }}
+    {% endcase %}
+    {{ include.post_date | date: " %-d, %Y" }}
+  </time>
+  <span style="padding-left: 5px; padding-right: 5px;"> • </span>
+  <span class="post-meta" itemprop="readtime">
+    {% capture read_time %}{% include read-time.html %}{% endcapture %}{{ read_time | strip }}
+  </span>
+  <span class="post-meta" style="padding-left: 5px; padding-right: 5px;"> • </span>
+  {% assign canonical_url = include.post_url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
+  <span class="post-meta"><span class="fb-comments-count" data-href="{{ canonical_url }}">0</span> {{ site.t[include.post_lang].comments }}</span>
+</div>
