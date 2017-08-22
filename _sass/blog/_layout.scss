@@ -112,10 +112,11 @@
  */
 .post-list {
   margin-left: 0;
+  padding: 0;
   list-style: none;
 
   > li {
-    margin-bottom: $spacing-unit * 1.5;
+    margin-bottom: $spacing-unit * 2;
   }
 
   > li > h2 {

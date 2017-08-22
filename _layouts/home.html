@@ -6,13 +6,17 @@ layout: default
 
   {{ content }}
 
+  <div>&nbsp;</div>
   <h2>Latest Posts</h2>
-
   <div>&nbsp;</div>
 
   <ul class="post-list">
     {% for post in site.posts %}
-      <li >
+      <li>
+        {% if site.show_post_image_posts_list %}
+          <div style="height:100px;width=100%;margin-bottom:13px;background:url('{{post.header.image | prepend: site.baseurl }}') center center repeat;">
+          </div>
+        {% endif %}
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ post.title | escape }}</a>
         </h2>
@@ -28,7 +32,7 @@ layout: default
         </div>
 
         <span>{{ post.excerpt | markdownify | truncatewords: 30 }}</span>
-
+        <div><a  href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">Read more...</a></div>
       </li>
     {% endfor %}
   </ul>

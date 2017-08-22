@@ -35,6 +35,8 @@ jekyll-theme-simple-blog:
 
 theme: # leave it empty
 
+show_post_image_posts_list: true
+
 header:
   image: /assets/patterns/symphony.png
 
