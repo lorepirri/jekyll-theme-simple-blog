@@ -41,15 +41,18 @@ header:
   image: /assets/patterns/symphony.png
 
 # social
-author: "Simple Blog Theme"
+author:
+  name: "Simple Blog Theme"
+
+author_short_bio: Jekyll Blog Theme, Responsive, SEO and Facebook enabled
+author_picture: assets/img/profile-60.png
+
 image: /assets/patterns/seigaiha.png
 twitter:
   username: lorepirri
 instagram_username: pirriontheroad
 #linkedin_username: lorepirri
 
-author_short_bio: Jekyll Blog Theme, Responsive, SEO and Facebook enabled
-author_picture: assets/img/profile-60.png
 
 #  site:
 facebook:

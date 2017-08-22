@@ -8,6 +8,8 @@
 layout: home
 header:
   image: /assets/img/home-header.jpg
+ref: home
+lang: en
 ---
 
 Simple Blog Theme is a clean, responsive blogging theme for Jekyll, with social features. It is inspired by the Cayman Blog Theme.

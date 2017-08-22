@@ -1,4 +1,4 @@
-{% assign page_author_name = page.author | default: site.author | default: nil | escape %}
+{% assign page_author_name = page.author.name | default: site.author.name | default: nil | escape %}
 {% assign page_author_id = page.facebook.authors | default: site.facebook.authors | default: nil | escape | first %}
 {% assign page_author_short_bio = page.author_short_bio | default: site.author_short_bio | default: nil | escape %}
 {% assign page_author_picture = page.author_picture | default: site.author_picture | default: nil | escape %}

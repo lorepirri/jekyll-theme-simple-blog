@@ -8,13 +8,13 @@
 {% endif %}
 
 
-{% if page.author or page.facebook.publisher_id %}
-  {% assign page_author = page.author | default: nil | escape %}
+{% if page.author.name or page.facebook.publisher_id %}
+  {% assign page_author = page.author.name | default: nil | escape %}
   {% assign facebook_publisher_id = page.facebook.publisher_id | default: nil | escape %}
   {% assign twitter_creator = page.twitter.username | default: site.twitter.site | default: nil | escape %}
   {% assign facebook_authors = page.facebook.authors | default: nil | escape %}
 {% else %}
-  {% assign page_author = site.author | default: nil | escape %}
+  {% assign page_author = site.author.name | default: nil | escape %}
   {% assign facebook_publisher_id = site.facebook.publisher_id | default: nil | escape %}
   {% assign twitter_creator = site.twitter.username | default: nil | escape %}
   {% assign facebook_authors = site.facebook.authors | default: nil | escape %}
