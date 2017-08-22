@@ -94,6 +94,9 @@
     <section class="page-header" style="padding-top: {{ header-padding }}; padding-bottom: {{ header-padding-bottom }}; background: linear-gradient(0deg,rgba(0,0,0,0.6),rgba(0,0,0,0.3)), url('{{ site.baseurl }}{{ page.header.image | default: site.header.image }}') center center repeat;">
       <h1 class="project-name">{{ page-title }}</h1>
       <h2 class="project-tagline">{{ page-tagline }}</h2>
+
+      {% include language-selector.html %}
+
       {% if page.layout == 'post' and page.repository.is_project_page %}
           <a href="{{ page.repository.repository_url }}" class="btn">Source Code</a>
         {% if page.repository.show_downloads %}
