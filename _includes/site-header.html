@@ -1,11 +1,12 @@
 <header class="site-header" role="banner">
 
   <div class="wrapper">
-    {% assign default_paths = site.pages | map: "path" %}
+    {% assign default_paths = site.pages | where:"lang", page.lang | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
 
     {% if page.layout != 'home' %}
-      <a class="site-title" href="{{ "/" | prepend: site.baseurl }}">{{ site.title | escape }}</a>
+      {% assign home_page_path = site.pages | where:"ref", "home" | where:"lang", page.lang | map: "url" | first %}
+      <a class="site-title" href="{{ home_page_path | prepend: site.baseurl }}">{{ site.title | escape }}</a>
     {% endif %}
 
     {% if page_paths %}
