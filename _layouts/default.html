@@ -175,7 +175,7 @@
         {% endif %}
 
         <!-- Contact icon -->
-        {% assign contact_page = site.pages | where: "path", site.t[page.lang].contact-page | first %}
+        {% assign contact_page = site.pages | where:"ref", "contact" | where:"lang", page.lang  | first %}
         {% if contact_page.title %}
           <span class="my-span-icon">
             <a href="{{ contact_page.url | prepend: site.baseurl }}" aria-label="{{ site.t[page.lang].contact }}" title="{{ site.t[page.lang].contact }} {{ site.author.name }}">
