@@ -20,4 +20,4 @@ Alternativamente, si puo' usare il plugin di Facebook per inviare un messaggio a
 
 {% include facebook-page-message.html %}
 
-[Vai alla Home Page]({{ site.baseurl }}/indice.html)
+{% include go-to-home-page.html %}

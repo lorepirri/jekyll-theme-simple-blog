@@ -18,4 +18,4 @@ Here listed some resources which provide  a saas service as a backend for forms 
 
 {% include facebook-page-message.html %}
 
-[Go to the Home Page]({{ site.baseurl }}/)
+{% include go-to-home-page.html %}

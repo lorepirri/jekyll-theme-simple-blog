@@ -83,6 +83,7 @@ t:
     contact-page: "contact.md"
     read-time: "min read"
     comments: "comments"
+    go-to-home-page: "Go to the Home Page"
     months:
       january: "Jan"
       february: "Feb"
@@ -104,6 +105,7 @@ t:
     contact-page: "contatta.md"
     read-time: "min di lettura"
     comments: "commenti"
+    go-to-home-page: "Vai alla Pagina Iniziale"
     months:
       january: "Gen"
       february: "Feb"
