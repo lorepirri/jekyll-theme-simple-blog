@@ -1,7 +1,13 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% assign page-lang = page.lang | default: site.lang | default: "en" %}
+<html lang="{{ page-lang }}">
 
   <head>
+    {% if page-lang == "en" %}
+      {% assign page-lang-country = "en_US" %}
+    {% elsif page-lang == "it" %}
+      {% assign page-lang-country = "it_IT" %}
+    {% endif %}
 
     <!-- Non social metatags -->
     <meta charset="utf-8">
@@ -47,7 +53,7 @@
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
     n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    document,'script','https://connect.facebook.net/{{ page-lang-country }}/fbevents.js');
     fbq('init', '{{ site.facebook.pixelcode }}', {
     em: 'insert_email_variable,'
     });
@@ -63,12 +69,13 @@
   </head>
   <body>
     {% if site.facebook.app_id %}
+
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId={{ site.facebook.app_id }}";
+      js.src = "//connect.facebook.net/{{ page-lang-country }}/sdk.js#xfbml=1&version=v2.10&appId={{ site.facebook.app_id }}";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
     {% endif %}
