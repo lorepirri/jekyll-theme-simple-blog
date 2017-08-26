@@ -83,7 +83,7 @@
     {% include site-header.html %}
 
     {% if page.layout == 'home' %}
-      {% assign page-tagline = site.description | escape %}
+      {% assign page-tagline = page.tagline | default: site.description | escape %}
       {% assign header-padding = "80px" %}
       {% assign header-padding-bottom = "80px" %}
     {% else %}
@@ -94,6 +94,7 @@
     {% if page.layout == 'page' %}
       {% assign page-tagline = page.tagline | escape %}
     {% endif %}
+
     {% if page.layout == 'post' %}
       {% assign page-tagline = page.tagline | default: page.repository.project_tagline | escape  %}
     {% endif %}

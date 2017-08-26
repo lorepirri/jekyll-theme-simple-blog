@@ -9,6 +9,10 @@ layout: home
 permalink: /indice.html
 header:
   image: /assets/img/home-header.jpg
+tagline: > # this means to ignore newlines until "ref:"
+  Scrivi una fantastica descrizione del tuo nuovo sito qui. Puoi modificare
+  questa descritione nel file index-it.md. Apparira' anche nel head meta (per
+  risultati di ricerche Google) e nella descrizione del sito nel feed.xml.
 ref: home
 lang: it
 ---
