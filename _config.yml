@@ -43,7 +43,9 @@ header:
 # social
 author:
   name: "Simple Blog Theme"
-  short_bio: Jekyll Blog Theme, Responsive, SEO and Facebook enabled
+  short_bio:
+    en: Jekyll Blog Theme, Responsive, SEO and Facebook enabled
+    it: Jekyll Blog Theme, Responsive, con SEO e integrazione Facebook
   picture: assets/img/profile-60.png
 
 image: /assets/patterns/seigaiha.png

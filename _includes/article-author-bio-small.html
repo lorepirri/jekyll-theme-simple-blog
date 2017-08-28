@@ -1,6 +1,6 @@
 {% assign page_author_name = page.author.name | default: site.author.name | default: nil | escape %}
 {% assign page_author_id = page.facebook.authors | default: site.facebook.authors | default: nil | escape | first %}
-{% assign page_author_short_bio = page.author.short_bio | default: site.author.short_bio | default: nil | escape %}
+{% assign page_author_short_bio = page.author.short_bio[page.lang] | default: site.author.short_bio[page.lang] | default: nil | escape %}
 {% assign page_author_picture = page.author.picture | default: site.author.picture | default: nil | escape %}
 
 {% if page_author_name %}
