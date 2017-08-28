@@ -1,6 +1,5 @@
-{% assign home_page = site.pages | where:"ref", "home" | where:"lang", page.lang | first %}
-
 <?xml version="1.0" encoding="UTF-8"?>
+{% assign home_page = site.pages | where:"ref", "home" | where:"lang", page.lang | first %}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>{{ site.title | xml_escape }}</title>
