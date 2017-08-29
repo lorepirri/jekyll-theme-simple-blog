@@ -49,30 +49,30 @@ author:
   picture: assets/img/profile-60.png
 
 image: /assets/patterns/seigaiha.png
-twitter:
-  username: lorepirri
-instagram_username: pirriontheroad
-#linkedin_username: lorepirri
 
+#twitter:
+#  username:
+#instagram_username:
+
+linkedin_username: lorepirri
 
 #  site:
 facebook:
-  publisher_id: 1474191545979552 #1592372034171500 #
+  publisher_id: 1474191545979552
   profile_id: 1474191545979552
-  app_id: 126080721296732 #1798910940422432 #
-  #admins: 1474191545979552
+  app_id: 126080721296732
   authors: [1474191545979552]
   #pixelcode: 1670622619859349
 
-# github on post
+
+# gitlab on site
+gitlab:
+  owner_url: https://gitlab.com/lorepirri
+
+# github on site
 github:
   owner_url: https://github.com/lorepirri
-#  project_tagline: "here short descr"
-#  is_project_page: true
-#  show_downloads: true
-#  repository_url: https://github.com/lorepirri/jekyll-theme-simple-blog
-#  zip_url: https://github.com/lorepirri/jekyll-theme-simple-blog/archive/master.zip
-#  tar_url: https://github.com/lorepirri/jekyll-theme-simple-blog/tarball/master
+
 
 # translation
 
