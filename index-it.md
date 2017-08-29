@@ -9,10 +9,16 @@ layout: home
 permalink: /indice.html
 header:
   image: /assets/img/home-header.jpg
-tagline: > # this means to ignore newlines until "ref:"
+tagline: > # this means to ignore newlines until "repository:"
   Scrivi una fantastica descrizione del tuo nuovo sito qui. Puoi modificare
   questa descritione nel file index-it.md. Apparira' anche nel head meta (per
   risultati di ricerche Google) e nella descrizione del sito nel feed.xml.
+repository:
+  is_project_page: true
+  show_downloads: true
+  repository_url: https://gitlab.com/lorepirri/jekyll-theme-simple-blog
+  zip_url: https://gitlab.com/lorepirri/jekyll-theme-simple-blog/repository/master/archive.zip
+  tar_url: https://gitlab.com/lorepirri/jekyll-theme-simple-blog/repository/master/archive.tar.gz  
 ref: home
 lang: it
 ---

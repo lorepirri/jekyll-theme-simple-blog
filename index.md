@@ -8,10 +8,16 @@
 layout: home
 header:
   image: /assets/img/home-header.jpg
-tagline: > # this means to ignore newlines until "ref:"
+tagline: > # this means to ignore newlines until "repository:"
   Write an awesome description for your new site here. You can edit this
   line in index.md. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
+repository:
+  is_project_page: true
+  show_downloads: true
+  repository_url: https://gitlab.com/lorepirri/jekyll-theme-simple-blog
+  zip_url: https://gitlab.com/lorepirri/jekyll-theme-simple-blog/repository/master/archive.zip
+  tar_url: https://gitlab.com/lorepirri/jekyll-theme-simple-blog/repository/master/archive.tar.gz
 ref: home
 lang: en
 ---
