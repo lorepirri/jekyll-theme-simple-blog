@@ -121,3 +121,10 @@ t:
       october: "Ott"
       november: "Nov"
       december : "Dic"
+
+defaults:
+  -
+    scope:
+      type: "posts"
+    values:
+      lang: "en"
