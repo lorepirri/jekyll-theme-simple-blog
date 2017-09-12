@@ -103,8 +103,6 @@
       <h1 class="project-name">{{ page-title }}</h1>
       <h2 class="project-tagline">{{ page-tagline }}</h2>
 
-      {% include language-selector.html %}
-
       {% if page.repository.is_project_page %}
           <a href="{{ page.repository.repository_url }}" class="btn" target="_blank">Source Code</a>
         {% if page.repository.show_downloads %}
@@ -118,6 +116,7 @@
         </h2> -->
       {% endif %}
       <!-- End: Post tagline -->
+      {% include language-selector.html %}
     </section>
 
     <section class="main-content">
