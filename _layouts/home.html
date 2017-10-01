@@ -28,6 +28,13 @@ layout: default
         </div>
 
         <span>{{ post.excerpt | default: post.tagline | markdownify | truncatewords: 140 }}</span>
+
+        <div class="post-meta-list post-tag-list">
+        {% for tag in post.tags %}
+          <code>{{ tag | escape }}</code>&nbsp;
+        {% endfor %}
+        </div>
+
         <div class="post-meta-list"><a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ site.t[page.lang].read-more }}...</a></div>
       </li>
     {% endfor %}
