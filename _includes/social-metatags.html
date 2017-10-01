@@ -22,7 +22,7 @@
   {% assign facebook_authors = site.facebook.authors | default: nil | escape %}
 {% endif %}
 
-{% assign page_description = page.excerpt | default: page.tagline | default: site.description | strip_html | normalize_whitespace | truncate: 152 | escape %}
+{% assign page_description = page.excerpt | default: page.tagline | default: site.description | strip_html | normalize_whitespace | truncate: 300 | escape %}
 
 {%if page.image %}
   {% assign page_image = site.url | append: site.baseurl | append: page.image %}
