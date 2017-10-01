@@ -1,7 +1,7 @@
 <header class="site-header" role="banner">
 
   <div class="wrapper">
-    {% assign default_paths = site.pages | where:"lang", page.lang | map: "path" %}
+    {% assign default_paths = site.pages | where:"lang", page.lang | sort:"order" | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
 
     {% if page.layout != 'home' %}
