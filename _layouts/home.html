@@ -27,7 +27,7 @@ layout: default
           {% include post-meta-info.html post_date=post.date post_url=post.url post_lang=post.lang %}
         </div>
 
-        <span>{{ post.excerpt | markdownify | truncatewords: 30 }}</span>
+        <span>{{ post.excerpt | default: post.tagline | markdownify | truncatewords: 140 }}</span>
         <div><a  href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ site.t[page.lang].read-more }}...</a></div>
       </li>
     {% endfor %}
