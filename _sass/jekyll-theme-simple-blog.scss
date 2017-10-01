@@ -171,18 +171,18 @@ a {
 
   @include large {
     max-width: $large-breakpoint;
-    padding: 3rem 6rem;
+    padding: 1rem 6rem; //3
     margin: 0 auto;
     font-size: 1.1rem;
   }
 
   @include medium {
-    padding: 3rem 4rem;
+    padding: 1rem 4rem; //3
     font-size: 1.1rem;
   }
 
   @include small {
-    padding: 2rem 1rem;
+    padding: 0.5rem 1rem; //2
     font-size: 1rem;
   }
 
@@ -398,6 +398,12 @@ a {
 
     @include small {
       padding: 0px 10px 10px 10px;
+    }
+  }
+
+  .hide-on-small {
+    @include small {
+      display: none;
     }
   }
 
