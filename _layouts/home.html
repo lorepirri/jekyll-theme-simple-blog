@@ -28,7 +28,7 @@ layout: default
         </div>
 
         <span>{{ post.excerpt | default: post.tagline | markdownify | truncatewords: 140 }}</span>
-        <div><a  href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ site.t[page.lang].read-more }}...</a></div>
+        <div class="post-meta-list"><a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ site.t[page.lang].read-more }}...</a></div>
       </li>
     {% endfor %}
   </ul>
