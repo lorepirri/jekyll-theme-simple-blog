@@ -145,7 +145,12 @@
 .post-meta-list {
   font-size: $small-font-size;
   color: $grey-color;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+}
+
+.post-tag-list {
+  //margin-top: -10px;
+  margin-bottom: 5px;
 }
 
 .post-link {
