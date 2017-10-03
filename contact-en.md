@@ -2,11 +2,14 @@
 layout: page
 title: Contact
 tagline: Create a contact form and you are good to go
+excerpt: >
+  Create a contact form and you are good to go. This goes SEO!
 permalink: /contact.html
 header:
   image: /assets/patterns/wov.png
 ref: contact
 lang: en  
+order: 3
 ---
 
 Jekyll is a great tool to create static sites but with static site, there's no backend to send your data to: that is why it's hard to put a form on a Jekyll site.
