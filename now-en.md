@@ -6,7 +6,7 @@ excerpt: >
   What I'm doing now. This goes SEO. Updated on 25 Settembre 2017.
 permalink: /now.html
 header:
-  image: /assets/patterns/now.png
+  image: /assets/patterns/symphony.png
 ref: now
 lang: en
 order: 1

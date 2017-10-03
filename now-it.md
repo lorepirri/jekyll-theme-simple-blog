@@ -6,7 +6,7 @@ excerpt: >
   Cosa faccio in questo periodo. Questa descrizione e' SEO. Aggiornata al 25 Settembre 2017.
 permalink: /adesso.html
 header:
-  image: /assets/patterns/now.png
+  image: /assets/patterns/symphony.png
 ref: now
 lang: it
 order: 1
