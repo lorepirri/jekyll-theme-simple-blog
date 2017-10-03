@@ -37,13 +37,13 @@
   <meta name="author" content="{{ page_author }}" />
 {%endif %}
 <meta name="description" content="{{ page_description }}" />
-{%if page.tags.length > 0 %}
+{%if page.tags.size > 0 %}
   <meta name="keywords" itemprop="tags" content="{{ page.tags | join: ', ' | escape }}"/>
 {%endif %}
 {%if page.keywords %}
   <meta name="keywords" itemprop="keywords" content="{{ page.keywords | escape  }}" />
 {%endif %}
-{%if page.categories.length > 0 %}
+{%if page.categories.size > 0 %}
   <meta name="keywords" itemprop="categories" content="{{ page.categories | join: ', ' | escape  }}" />
 {%endif %}
 {%if page.category %}
