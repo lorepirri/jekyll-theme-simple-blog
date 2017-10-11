@@ -8,9 +8,21 @@ View Demo: https://lorepirri.gitlab.io/jekyll-theme-simple-blog/
 -----
 # Simple Blog Theme
 
-*Simple Blog is a Jekyll theme for Gitlab or GitHub Pages. It is based on [Cayman Blog Theme](https://github.com/lorepirri/cayman-blog). You can [preview the theme to see what it looks like](https://lorepirri.gitlab.io/jekyll-theme-simple-blog/), or even [use it today](#usage).*
+*Simple Blog is a Jekyll theme for Gitlab or GitHub Pages. It is based on [Cayman Blog Theme](https://github.com/lorepirri/cayman-blog). You can [preview the theme to see what it looks like](https://lorepirri.gitlab.io/jekyll-theme-simple-blog/), or even [use it today](#install).*
 
 <img src="https://gitlab.com/lorepirri/jekyll-theme-simple-blog/raw/master/simple-blog-theme.png" alt="Thumbnail of jekyll-theme-simple-blog" style="max-width:30%; border: 1px solid grey;"/>
+
+## Features
+
+- Blog
+- Responsive
+- Minimal
+- Multi-language
+- SEO optimized for Facebook preview
+- Facebook plugins integration (Page, Comments, Messenger, Like)
+- Facebook Mirring Comments
+- Social buttons (facebook, instagram, linkedin, twitter, github, gitlab)
+- RSS feed multi-language
 
 ## Install
 
