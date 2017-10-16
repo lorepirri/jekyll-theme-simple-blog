@@ -44,6 +44,18 @@ a {
   }
 }
 
+.btn-dark {
+  color: $body-link-color !important;
+  background-color: #fff !important;
+  border-color: $body-link-color !important;
+
+  &:hover {
+    color: $body-link-color !important;
+    background-color: $code-bg-color !important;
+    border-color: $body-link-color !important;
+  }
+}
+
 .btn {
   display: inline-block;
   margin-bottom: 1rem;

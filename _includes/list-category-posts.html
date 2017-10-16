@@ -31,3 +31,7 @@
       </li>
     {% endfor %}
   </ul>
+{% if max_posts < posts_lang.size %}
+  {% capture category_url %}{% include get-page-url.html page_ref=category page_lang=lang %}{% endcapture %}
+  <a href="{{ category_url }}" class="btn btn-dark">Show More...</a>
+{% endif %}
