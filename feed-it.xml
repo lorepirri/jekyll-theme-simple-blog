@@ -1,6 +1,6 @@
 ---
-layout: null
+layout: rss-feed
 ref: rss-feed
 lang: it
 ---
-{% include rss-feed.xml %}
+
