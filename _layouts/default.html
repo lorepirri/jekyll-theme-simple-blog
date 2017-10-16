@@ -99,7 +99,7 @@
       {% assign header-padding-bottom = "20px" %}
     {% endif %}
 
-    {% if page.layout == 'page' %}
+    {% if page.layout == 'page' or page.layout == 'category' %}
       {% assign page-tagline = page.tagline | escape %}
     {% endif %}
 

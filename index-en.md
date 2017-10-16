@@ -38,3 +38,13 @@ It has already a Facebook Page associated with it, which gathers all the interac
 Have a look at the Github page for more information.
 
 You find this descriptive text in the `index.md` file, so you can change it, or remove it completely, according to your needs.
+
+<h2>Latest Articles</h2>
+<div>&nbsp;</div>
+{% include list-category-posts.html lang=page.lang category="articles" %}
+
+---
+
+<h2>Latest 3 Projects</h2>
+<div>&nbsp;</div>
+{% include list-category-posts.html lang=page.lang category="projects" max=3 %}

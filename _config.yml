@@ -128,3 +128,4 @@ defaults:
       type: "posts"
     values:
       lang: "en"
+      category: articles
