@@ -3,6 +3,8 @@
 
 {% if page.title and page.layout == 'page' %}
   {% assign page_title = page.title | append: ' | ' | append: site.title | escape %}
+{% elsif page.title and page.layout == 'category' %}
+  {% assign page_title = page.title | append: ' | ' | append: site.title | escape %}
 {% elsif page.title %}
  {% assign page_title = page.title | escape %}
 {% else %}
