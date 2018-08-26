@@ -1,12 +1,13 @@
 {% assign category = include.category %}
 {% assign lang = include.lang %}
 {% assign posts_lang = site.categories[category] | where:"lang", lang %}
-{% assign max_posts = include.max | posts_lang.size %}
+{% assign max_posts = include.max_posts | posts_lang.size %}
+{% assign max_post_tags = include.max_post_tags | posts_lang.size %}
 <ul class="post-list">
     {% for post in posts_lang limit:max_posts %}
       <li>
         {% if site.show_post_image_posts_list %}
-          <div style="height:100px;width=100%;margin-bottom:13px;background:url('{{post.header.image | prepend: site.baseurl }}') center center repeat;">
+          <div style="height:100px;width:100%;margin-bottom:13px;background:url('{{post.header.image | prepend: site.baseurl }}') center center repeat;">
           </div>
         {% endif %}
         <h2>
@@ -21,17 +22,20 @@
 
         {%if post.tags.size > 0 %}
         <div class="post-meta-list post-tag-list">
-        {% for tag in post.tags %}
+        {% for tag in post.tags limit:max_post_tags %}
           <code>{{ tag | escape }}</code>&nbsp;
         {% endfor %}
+        {% if max_post_tags < post.tags.size %}
+          <code>...</code>
+        {% endif %}        
         </div>
         {%endif %}
 
-        <div class="post-meta-list"><a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ site.t[lang].read-more }}...</a></div>
+        <div class="post-meta-list"><a href="{{ post.url | prepend: site.baseurl }}" title="{{ post.title }}">{{ site.t[lang].read-more }}</a></div>
       </li>
     {% endfor %}
   </ul>
 {% if max_posts < posts_lang.size %}
   {% capture category_url %}{% include get-page-url.html page_ref=category page_lang=lang %}{% endcapture %}
-  <a href="{{ category_url }}" class="btn btn-dark">Show More...</a>
+  <a href="{{ category_url }}" class="btn btn-dark">{{ site.t[lang].show-more }}</a>
 {% endif %}
