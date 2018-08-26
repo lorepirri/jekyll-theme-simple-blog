@@ -3,7 +3,7 @@
 {% assign this_page_lang = page.lang %}
 {% assign posts_number = posts | size %}
 {% if posts_number > 1 %}
-<div style="text-align: right;">
+<div style="text-align: right; padding-bottom: 1em; padding-top: 1em;">
 {% for post in posts %}
   {% if post.ref and post.lang != this_page_lang %}
   <span style="padding-left: 6px; padding-right: 6px;">
@@ -20,7 +20,7 @@
 {% assign pages = site.pages | where:"ref", page.ref | sort: 'lang' %}
 {% assign pages_number = pages | size %}
 {% if pages_number > 1 %}
-<div style="text-align: right; padding-bottom: 8px;">
+<div style="text-align: right; padding-bottom: 2em; padding-top: 1em;">
 {% for page in pages %}
   {% if page.ref and page.lang != this_page_lang %}
   <span style="padding-left: 6px; padding-right: 6px;">
