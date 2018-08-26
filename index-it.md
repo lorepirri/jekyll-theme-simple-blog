@@ -41,10 +41,10 @@ Trovi questo testo nel file `indice.md`, puoi modificarlo, o rimuoverlo completa
 
 <h1>Articoli Recenti</h1>
 <div>&nbsp;</div>
-{% include list-category-posts.html lang=page.lang category="articles" %}
+{% include list-category-posts.html lang=page.lang category="articles" max_posts=3 max_post_tags=3 %}
 
 ---
 
 <h1>Ultimi 3 Progetti</h1>
 <div>&nbsp;</div>
-{% include list-category-posts.html lang=page.lang category="projects" max=3 %}
+{% include list-category-posts.html lang=page.lang category="projects" max_posts=3 max_post_tags=3 %}

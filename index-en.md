@@ -41,10 +41,10 @@ You find this descriptive text in the `index.md` file, so you can change it, or 
 
 <h1>Latest Articles</h1>
 <div>&nbsp;</div>
-{% include list-category-posts.html lang=page.lang category="articles" %}
+{% include list-category-posts.html lang=page.lang category="articles" max_posts=3 max_post_tags=3 %}
 
 ---
 
 <h1>Latest 3 Projects</h1>
 <div>&nbsp;</div>
-{% include list-category-posts.html lang=page.lang category="projects" max=3 %}
+{% include list-category-posts.html lang=page.lang category="projects" max_posts=3 max_post_tags=3 %}
