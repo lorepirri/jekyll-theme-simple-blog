@@ -13,7 +13,7 @@ order: 1
 ---
 This is a [now page](http://nownownow.com/about){:target="_blank"}, and it was inspired by [the /now movement](https://sivers.org/nowff){:target="_blank"}. If you have your own site, [you should make one](http://nownownow.com/about){:target="_blank"}, too.
 
-_Updated on_ **25 Settembre 2017**.
+_Updated on_ **26 August 2018**.
 
 Here write what you are up to now.
 
