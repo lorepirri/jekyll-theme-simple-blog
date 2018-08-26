@@ -39,12 +39,12 @@ Dai un'occhiata alla pagina Gitlab per maggiori informazioni.
 
 Trovi questo testo nel file `indice.md`, puoi modificarlo, o rimuoverlo completamente, a seconda delle tue necessitá.
 
-<h2>Articoli Recenti</h2>
+<h1>Articoli Recenti</h1>
 <div>&nbsp;</div>
 {% include list-category-posts.html lang=page.lang category="articles" %}
 
 ---
 
-<h2>Ultimi 3 Progetti</h2>
+<h1>Ultimi 3 Progetti</h1>
 <div>&nbsp;</div>
 {% include list-category-posts.html lang=page.lang category="projects" max=3 %}
