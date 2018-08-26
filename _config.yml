@@ -79,8 +79,8 @@ github:
 t:
   en:
     latest-posts:  "Latest Posts"
-    read-more:  "Read More ?"
-    show-more:  "Show More ?"
+    read-more:  "Read More →"
+    show-more:  "Show More →"
     loading:  "Loading..."
     on-word: "on"
     contact: "Contact"
@@ -103,8 +103,8 @@ t:
       december : "Dec"
   it:
     latest-posts:  "Ultimi Posts"
-    read-more:  "Leggi ?"
-    show-more:  "Mostra ?"
+    read-more:  "Leggi →"
+    show-more:  "Mostra →"
     loading:  "Caricamento..."
     on-word: "su"
     contact: "Contatta"
