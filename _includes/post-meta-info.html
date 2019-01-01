@@ -23,5 +23,9 @@
   </span>
   <span style="padding-left: 5px; padding-right: 5px;"> • </span>
   {% assign canonical_url = include.post_url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
-  <span><span class="fb-comments-count" data-href="{{ canonical_url }}">0</span> {{ site.t[include.post_lang].comments }}</span>
+  
+  {% if site.disqus_id %}
+  <span><a href="{{ canonical_url }}#disqus_thread" data-disqus-identifier="{{include.post_ref}}">Comment on this</a></span>
+  {% endif %}
+    
 </div>

@@ -7,25 +7,10 @@ layout: default
 <article itemscope itemtype="http://schema.org/BlogPosting">
 
   <div itemprop="articleBody">
-    {% include facebook-like-post.html %}
-    <br />
     {{ content }}
     <br />
-    {% include facebook-like-post.html %}
-    {% include facebook-comments.html %}
+
+    {% include disqus-comments.html %}
   </div>
-
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
-
-  {% if site.facebook.pixelcode %}
-  <!-- Facebook Pixel Code -->
-  <script>
-  fbq('track', 'ViewContent');
-  </script>
-  <!-- End Facebook Pixel Code -->
-  {% endif %}
-
 
 </article>

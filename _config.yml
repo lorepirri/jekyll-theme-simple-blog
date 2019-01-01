@@ -10,8 +10,7 @@ title: Simple Blog Theme
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  line in _config.yml. It will appear in your document head meta (for SEO optimization) and in your feed.xml site description.
 baseurl: "/jekyll-theme-simple-blog" # change this to the subpath of your site, e.g. /blog. Leave it empty if you don't need it.
 url: "https://lorepirri.gitlab.io" # change this to the base hostname & protocol for your site
 
@@ -44,8 +43,8 @@ header:
 author:
   name: "Simple Blog Theme"
   short_bio:
-    en: Jekyll Blog Theme, Responsive, SEO and Facebook enabled
-    it: Jekyll Blog Theme, Responsive, con SEO e integrazione Facebook
+    en: Jekyll Blog Theme, Responsive
+    it: Jekyll Blog Theme, Responsive
   picture: assets/img/profile-60.png
 
 image: /assets/img/profile-225.png
@@ -54,16 +53,8 @@ image: /assets/img/profile-225.png
 #  username:
 #instagram_username:
 
-#linkedin_username: lorepirri
-
-#  site:
-facebook:
-  publisher_id: 1474191545979552
-  profile_id: 1474191545979552
-  app_id: 126080721296732
-  authors: [1474191545979552]
-  #pixelcode: 1670622619859349
-
+#linkedin_username: hereyourlinkedin-id-only
+#disqus_id: hereyourdisqus-id
 
 # gitlab on site
 gitlab:

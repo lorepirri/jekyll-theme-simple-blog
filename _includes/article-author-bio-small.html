@@ -1,18 +1,19 @@
 {% assign page_author_name = page.author.name | default: site.author.name | default: nil | escape %}
-{% assign page_author_id = page.facebook.authors | default: site.facebook.authors | default: nil | escape | first %}
 {% assign page_author_short_bio = page.author.short_bio[page.lang] | default: site.author.short_bio[page.lang] | default: nil | escape %}
 {% assign page_author_picture = page.author.picture | default: site.author.picture | default: nil | escape %}
+
+{% capture about_url %}{% include get-page-url.html page_ref="about" page_lang=page.lang %}{% endcapture %}
 
 {% if page_author_name %}
 <div class="author-article">
   <div class="author-picture">
-    <a href="https://www.facebook.com/{{ page_author_id }}" target="_blank">
-      <img src="{{ page_author_picture }}" class="author-image" alt="{{ page_author_name }} {{ site.t[page.lang].on-word }} Facebook">
+    <a href="{{ about_url }}">
+      <img src="{{ page_author_picture }}" class="author-image" alt="{{ page_author_name }}">
     </a>
   </div>
 
   <div class="author-bio">
-    <a href="https://www.facebook.com/{{ page_author_id }}" target="_blank">
+    <a href="{{ about_url }}" title="{{ page_author_name }}">
       <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">
         {{ page_author_name }}
       </span></span>
@@ -22,5 +23,5 @@
 </div>
 {% endif %}
 <div class="post-meta">
-  {% include post-meta-info.html post_date=page.date post_url=page.url post_lang=page.lang %}
+  {% include post-meta-info.html post_date=page.date post_ref=page.ref post_url=page.url post_lang=page.lang %}
 </div>

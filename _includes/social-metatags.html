@@ -1,27 +1,14 @@
 <!-- Update your html tag to include the itemscope and itemtype attributes. -->
 <html itemscope itemtype="http://schema.org/Article">
 
-{% if page.title and page.layout == 'page' %}
-  {% assign page_title = page.title | append: ' | ' | append: site.title | escape %}
-{% elsif page.title and page.layout == 'category' %}
-  {% assign page_title = page.title | append: ' | ' | append: site.title | escape %}
-{% elsif page.title %}
- {% assign page_title = page.title | escape %}
-{% else %}
- {% assign page_title = site.title | escape %}
-{% endif %}
+{% include page-title.html %}
 
-
-{% if page.author.name or page.facebook.publisher_id %}
+{% if page.author.name %}
   {% assign page_author = page.author.name | default: nil | escape %}
-  {% assign facebook_publisher_id = page.facebook.publisher_id | default: nil | escape %}
   {% assign twitter_creator = page.twitter.username | default: site.twitter.site | default: nil | escape %}
-  {% assign facebook_authors = page.facebook.authors | default: nil | escape %}
 {% else %}
   {% assign page_author = site.author.name | default: nil | escape %}
-  {% assign facebook_publisher_id = site.facebook.publisher_id | default: nil | escape %}
   {% assign twitter_creator = site.twitter.username | default: nil | escape %}
-  {% assign facebook_authors = site.facebook.authors | default: nil | escape %}
 {% endif %}
 
 {% assign page_description = page.excerpt | default: page.tagline | default: site.description | strip_html | normalize_whitespace | truncate: 300 | escape %}
@@ -52,7 +39,6 @@
   <meta name="keywords" itemprop="category" content="{{ category | escape  }}" />
 {%endif %}
 
-<!-- Schema.org markup for Google+ -->
 <meta itemprop="name" content="{{ page_title }}" />
 <meta itemprop="description" content="{{ page_description }}" />
 {%if page_image %}
@@ -104,32 +90,6 @@
 <meta property="og:updated_time" content="{{ page.modified_date | date_to_xmlschema }}" />
 <meta property="article:modified_time" content="{{ page.modified_date | date_to_xmlschema }}" />
 {%endif %}
-
-{%if site.facebook.admins %}
-  {% for admin in site.facebook.admins %}
-    <meta property="fb:admins" content="{{ admin }}" />
-  {% endfor %}
-{%endif %}
-
-{%if site.facebook.app_id %}
-  <meta property="fb:app_id" content="{{ site.facebook.app_id }}" />
-{%endif %}
-
-{%if site.facebook.profile_id %}
-  <meta property="fb:profile_id" content="{{ site.facebook.profile_id }}" />
-{%endif %}
-
-{%if facebook_publisher_id %}
-  <meta property="article:publisher" content="https://www.facebook.com/{{ facebook_publisher_id }}" />
-  <meta property="fb:pages" content="{{ facebook_publisher_id }}" />
-{%endif %}
-
-{%if facebook_authors %}
-  {% for fb_author in facebook_authors %}
-    <meta property="article:author" content="https://www.facebook.com/{{ fb_author }}" />
-  {% endfor %}
-{%endif %}
-
 
 {%if page.tags %}
   {% for tag in page.tags %}

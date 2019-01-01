@@ -1,8 +1,0 @@
-{% if site.facebook.publisher_id %}
-<div style="text-align: left; display: block; word-wrap: break-word; -webkit-font-smoothing: antialiased;">
-  <div>
-    {% assign canonical_url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
-    <div class="fb-like" data-href="{{ canonical_url }}" data-layout="button_count" data-action="like" data-size="large" data-show-faces="false" data-share="true"></div>
-  </div>
-</div>
-{% endif %}

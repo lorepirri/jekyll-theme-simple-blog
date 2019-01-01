@@ -1,8 +1,0 @@
-{% if site.facebook.publisher_id %}
-<div style="padding-top: 40px; text-align: center; display: block; word-wrap: break-word; -webkit-font-smoothing: antialiased;">
-  <div>
-    {% assign canonical_url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
-    <div class="fb-comments" data-href="{{ canonical_url }}" data-numposts="5" width="100%"></div>
-  </div>
-</div>
-{% endif %}

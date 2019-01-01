@@ -12,11 +12,11 @@ header:
 tagline: > # this means to ignore newlines until "repository:"
   Scrivi una fantastica descrizione del tuo nuovo sito qui. Puoi modificare
   questa descritione nel file index-it.md. Apparira' anche nel head meta (per
-  risultati di ricerche Google) e nella descrizione del sito nel feed.xml.
+  indicizzazione SEO) e nella descrizione del sito nel feed.xml.
 excerpt: >
   Scrivi una fantastica descrizione del tuo nuovo sito qui. Puoi modificare
   questa descritione nel file index-it.md. Apparira' anche nel head meta (per
-  risultati di ricerche Google) e nella descrizione del sito nel feed.xml.
+  indicizzazione SEO) e nella descrizione del sito nel feed.xml.
 repository:
   is_project_page: true
   show_downloads: true
@@ -29,11 +29,7 @@ lang: it
 
 Simple Blog Theme e' un tema pulito e responsive per Jekyll, con alcune funzionalitá social. Si ispira al tema Cayman Blog.
 
-Questo tema ha tutto quello di cui avete bisogno per iniziare con un blog in Jekyll con nessuno sforzo: pagine, post, bottoni social, commenti, integrazione con pagina Facebook. É responsive quindi funziona su mobile.
-
-Si puo' specificare una pagina Facebook associata al sito web, con funzionalita' di mirroring per i commenti.
-
-{% include facebook-page-summary.html %}
+Questo tema ha tutto quello di cui avete bisogno per iniziare con un blog in Jekyll con nessuno sforzo: pagine, post, bottoni social, commenti. É responsive quindi funziona su mobile.
 
 Dai un'occhiata alla pagina Gitlab per maggiori informazioni.
 
@@ -45,6 +41,6 @@ Trovi questo testo nel file `indice.md`, puoi modificarlo, o rimuoverlo completa
 
 ---
 
-<h1>Ultimi 3 Progetti</h1>
+<h1>Ultimi Progetti</h1>
 <div>&nbsp;</div>
 {% include list-category-posts.html lang=page.lang category="projects" max_posts=3 max_post_tags=3 %}

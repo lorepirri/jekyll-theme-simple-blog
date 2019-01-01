@@ -18,10 +18,8 @@ View Demo: https://lorepirri.gitlab.io/jekyll-theme-simple-blog/
 - Responsive
 - Minimal
 - Multi-language
-- SEO optimized for Facebook preview
-- Facebook plugins integration (Page, Comments, Messenger, Like)
-- Facebook Mirring Comments
-- Social buttons (facebook, instagram, linkedin, twitter, github, gitlab)
+- SEO optimized
+- Social buttons (instagram, linkedin, twitter, github, gitlab)
 - RSS feed multi-language
 
 ## Install
