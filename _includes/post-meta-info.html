@@ -24,8 +24,7 @@
   <span style="padding-left: 5px; padding-right: 5px;"> • </span>
   {% assign canonical_url = include.post_url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
   
-  {% if site.disqus_id %}
-  <span><a href="{{ canonical_url }}#disqus_thread" data-disqus-identifier="{{include.post_ref}}">Comment on this</a></span>
-  {% endif %}
+
+  <!-- here comments count -->
     
 </div>
