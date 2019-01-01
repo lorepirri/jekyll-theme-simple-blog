@@ -25,14 +25,21 @@ exclude: [vendor, "Gemfile", "Gemfile.lock"]
 # https://jekyllrb.com/docs/permalinks
 permalink: /:title.html
 
-google_analytics:
-
 # jekyll-theme-simple-blog date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 jekyll-theme-simple-blog:
   date_format: "%b %-d, %Y"
 
 theme: # leave it empty
+
+header_page_refs: ['coding','projects','about']
+
+#plugins:
+gems:
+  - jekyll-target-blank
+
+target-blank:
+    rel: nofollow
 
 show_post_image_posts_list: false
 

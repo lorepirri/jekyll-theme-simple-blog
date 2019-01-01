@@ -15,7 +15,7 @@
         </h2>
 
         <div class="post-meta-list">
-          {% include post-meta-info.html post_date=post.date post_url=post.url post_lang=post.lang %}
+          {% include post-meta-info.html post_date=post.date post_ref=post.ref post_url=post.url post_lang=post.lang %}
         </div>
 
         <span>{{ post.excerpt | default: post.tagline | markdownify | truncatewords: 140 }}</span>
