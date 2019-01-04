@@ -34,8 +34,7 @@ theme: # leave it empty
 
 header_page_refs: ['coding','projects','about']
 
-#plugins:
-gems:
+plugins:
   - jekyll-target-blank
 
 target-blank:
